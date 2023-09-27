@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import { View, FlatList, Text, StyleSheet } from 'react-native';
+import { View, FlatList, Text, StyleSheet , Image } from 'react-native';
 
 const data = [
   { id: '1', text: 'Item 1' },
@@ -12,17 +12,22 @@ const data = [
 
 const MyListComponent = () => {
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={data}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Text>{item.text}</Text>
-          </View>
-        )}
-      />
-    </View>
+    <SafeAreaView style={styles.container}>
+        <Text>Upcoming Weather!</Text>    
+        <Image
+            source = {require("./cloudy.jpg")}
+            style = {styles.image}
+        />
+        <FlatList
+            data={data}
+            keyExtractor={(item) => item.id}
+            renderItem={({ item }) => (
+            <View style={styles.item}>
+                <Text>{item.text}</Text>
+            </View>
+            )}
+        />
+        </SafeAreaView>
   );
 };
 
@@ -35,6 +40,11 @@ const styles = StyleSheet.create({
     padding: 16,
     borderBottomWidth: 1,
     borderBottomColor: '#ccc',
+  },
+
+  image: {
+    width: 200,
+    height: 200,
   },
 });
 
