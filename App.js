@@ -1,15 +1,13 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
-import Upcomingweather from "./src/components/Upcomingweather";
-import Weather from "./src/components/Weather";
-import OurChild from "./src/components/OurChild";
+import Upcomingweather from "./src/screens/Upcomingweather";
+import Weather from "./src/screens/Weather";
+import City from "./src/screens/City";
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <OurChild message= {"Hello"}/>
-      <OurChild message= {"Greetings"}/>
-      <OurChild message= {"Goodbye"}/>
+      <City />
     </View>
   );
 };

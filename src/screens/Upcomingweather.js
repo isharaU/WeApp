@@ -1,32 +1,34 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
 import { View, FlatList, Text, StyleSheet , ImageBackground } from 'react-native';
+import ListItems from './ListItems';
 
 const data = [
-  { id: '1', text: 'Item 1' },
-  { id: '2', text: 'Item 2' },
-  { id: '3', text: 'Item 3' },
-  { id: '4', text: 'Item 4' },
-  { id: '5', text: 'Item 5' },
+  { id: '1', text: 'item 1' },
+  { id: '2', text: 'item 2' },
+  { id: '3', text: 'item 3' },
+  { id: '4', text: 'item 4' },
+  { id: '5', text: 'item 5' },
 ];
 
 const Upcomingweather = () => {
   return (
     <SafeAreaView style={styles.container}>    
+
         <ImageBackground
             source = {require("./cloudy.jpg")}
             style = {styles.image}>
 
             <Text style={styles.head}>Upcoming Weather!</Text>
+
             <FlatList
                 data={data}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
-                <View style={styles.item}>
-                    <Text>{item.text}</Text>
-                </View>
+                <ListItems text={item.text} />
                 )}    
             />
+
         </ImageBackground>
     </SafeAreaView>
   );
@@ -35,13 +37,6 @@ const Upcomingweather = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  },
-
-  item: {
-    padding: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: '#ccc',
-    flex: 0.1,
   },
 
   head: {
