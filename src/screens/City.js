@@ -22,10 +22,10 @@ const City = () => {
 
             <View style={styles.risesetwrapper}>
 
-                <Feather name="sunrise" size={50} color="white" />
+                <Feather name="sunrise" size={50} color="purple" />
                 <Text style={styles.risesetText}>10:46:58am</Text>
 
-                <Feather name="sunset" size={50} color="white" />
+                <Feather name="sunset" size={50} color="yellow" />
                 <Text style={styles.risesetText}>17:28:15pm</Text>
                 
             </View>
@@ -81,12 +81,15 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         marginTop: 30,
+        paddingLeft: 15,
+        paddingRight: 15,
     },
 
     risesetText: {
         fontSize: 20,
         fontWeight: 'bold',
         color: 'orange',
+        flexDirection: 'column',
     },
 });
 

@@ -1,77 +1,103 @@
-import React from 'react';
-import { View, Text,SafeAreaView,StyleSheet,Image } from 'react-native';
-import { Feather } from '@expo/vector-icons'; 
+import React from "react";
+import { SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Feather } from '@expo/vector-icons';
+import RowText from "./RowText";
+
 
 const Weather = () => {
   return (
-    <SafeAreaView style = {styles.wrapper}>
-      <View style = {styles.container}>
+    <SafeAreaView style={styles.container}>
+      <Feather name="sun" size={80} color="black" />
 
-        <Feather name="sun" size={100} color="black" />
-        
-        <Text style = {styles.temp}>6</Text>
-        <Text style = {styles.feels}>Feels like 5</Text>
+      <RowText
+        props={{
+          containerStyle: styles.ViewOne,
+          textStyleone: styles.count,
+          textOne: "8",
+          textStyletwo: styles.Feels,
+          textTwo: "Feels like 4",
+        }}
+      />  
+
+      <RowText
+        props={{
+          containerStyle: styles.ViewTwo,
+          textStyleone: styles.HighLow,
+          textOne: "High: 8",
+          textStyletwo: styles.HighLow,
+          textTwo: "LOW: 4",
+        }}
+      />
       
-        <View style ={styles.highlowwrapper}>
-          <Text style = {styles.highlow}>High: 8</Text>
-          <Text style = {styles.highlow}>Low: 6</Text>
-        </View>
+      <RowText
+        props={{
+          containerStyle: styles.ViewThree,
+          textStyleone: styles.weather,
+          textOne: "It's Sunny",
+          textStyletwo: styles.solu,
+          textTwo: "Perfect T-shirt weather",
+        }}
+      />
 
-        <View style = {styles.bodyWrapper}>
-          <Text style = {styles.description}>It's sunny</Text>
-          <Text style = {styles.messages}>Its perfect t-shirt Weather</Text>
-        </View>
-
-      </View>
     </SafeAreaView>
-
-    
   );
 }
 
+
 const styles = StyleSheet.create({
+
   container: {
-    backgroundColor: 'yellow',
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingTop: 50,
-  } ,
-  wrapper: {
-    flex: 0.9,
-    backgroundColor: 'red',
-    
-  } ,
+    flex: 1,
+    backgroundColor: "pink",
+    alignItems: "center",
+    paddingTop: Platform.OS === "android" ? 40 : 0,
+  },
 
-  temp: {
-    fontSize: 48,
-    color: 'black'
-  } ,
+  ViewOne: {
+    padding: 20,
+    alignItems: "center",
+  },
 
-  feels: {
-    fontSize : 30,
-    color: 'black'
-  } ,
+  count: {
+    fontSize: 50,
+    fontWeight: "bold",
+  },
 
-  highlow: {
-    color: 'black',
-    fontSize : 20
-  } ,
+  Feels: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
 
-  bodyWrapper: {
-    justifyContent: 'flex-end',
-    alignItems: 'flex-start',
-    paddingLeft: 25,
-    marginBottom: 40,
-  } ,
+  ViewTwo: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "70%",
+    padding: 10,
+  },
 
-  description: {
-    fontSize: 48,
-  } ,
+  HighLow: {
+    fontSize: 20,
+    color: "yellow",
+  },
 
-  messages: {
-    fontSize: 30,
-  } ,
+  ViewThree: {
+    alignItems: "center",
+    paddingTop: 200,
+    backgroundColor : "green",
+  },
+
+  weather: {
+    fontSize: 40,
+    fontWeight: "bold",
+  },
+
+  solu: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
 
 
-})
+
+});
+
 export default Weather;
