@@ -13,9 +13,9 @@ const Weather = () => {
         props={{
           containerStyle: styles.ViewOne,
           textStyleone: styles.count,
-          textOne: "8",
+          textOne: "6",
           textStyletwo: styles.Feels,
-          textTwo: "Feels like 4",
+          textTwo: "Feels like 5",
         }}
       />  
 
@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "pink",
     alignItems: "center",
-    paddingTop: Platform.OS === "android" ? 40 : 0,
+    paddingTop: Platform.OS === "android" ? 4 : 0,
   },
 
   ViewOne: {

@@ -41,10 +41,13 @@ const styles = StyleSheet.create({
 
   head: {
     paddingBottom: 20,
+    fontSize: 30,
+    color: 'green',
+    fontWeight: 'bold',
     },
 
   image: {
-    paddingTop: 50,
+    paddingTop: 5,
     paddingLeft: 20,
     width: 350,
     height: 800,

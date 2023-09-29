@@ -37,7 +37,7 @@ const City = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 0.3,
-        marginTop: StatusBar.currentHeight || 0,   
+   
     } ,
     imageLayout: {
         width: 350,
