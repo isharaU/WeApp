@@ -2,6 +2,7 @@ import React from "react";
 import { SafeAreaView, StyleSheet, Text, View } from "react-native";
 import { Feather } from '@expo/vector-icons';
 import RowText from "./RowText";
+import { weatherType } from "../Utilities/WeatherType"; 
 
 
 const Weather = () => {
@@ -35,7 +36,7 @@ const Weather = () => {
           textStyleone: styles.weather,
           textOne: "It's Sunny",
           textStyletwo: styles.solu,
-          textTwo: "Perfect T-shirt weather",
+          textTwo: weatherType["Thunderstorm"].message,
         }}
       />
 
@@ -50,7 +51,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "pink",
     alignItems: "center",
-    paddingTop: Platform.OS === "android" ? 4 : 0,
+    paddingTop: 40,
   },
 
   ViewOne: {
@@ -82,7 +83,8 @@ const styles = StyleSheet.create({
 
   ViewThree: {
     alignItems: "center",
-    paddingTop: 200,
+    marginTop: 20,
+    padding: 20,
     backgroundColor : "green",
   },
 

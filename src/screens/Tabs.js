@@ -13,9 +13,21 @@ const Tabs = () => {
     <Tab.Navigator screenOptions={{
         tabBarActiveTintColor: '#e91e63',
         tabBarInactiveTintColor: 'gray',
+        tabBarStyle: {
+            backgroundColor: 'lightblue' ,
+        } ,
+        headerStyle: {
+            backgroundColor: 'lightblue' ,
+        },
+        headerTitleStyle: {
+            fontWeight: 'bold',
+            fontSize: 30,
+            color: '#e91e63',
+        },
+        
         }}>
 
-        <Tab.Screen name="Current" component={Weather} options={{
+        <Tab.Screen name="වර්ථමාන " component={Weather} options={{
             tabBarIcon: ({ focused }) => (
             <Feather 
             name="droplet" 
@@ -24,7 +36,7 @@ const Tabs = () => {
         }}
         />
 
-        <Tab.Screen name="Upcoming" component={Upcomingweather} options={{
+        <Tab.Screen name="ඉදිරියට " component={Upcomingweather} options={{
             tabBarIcon: ({ focused }) => (
             <Feather 
             name="clock" 
@@ -33,7 +45,7 @@ const Tabs = () => {
         }}
         
         />
-        <Tab.Screen name="City" component={City} options={{
+        <Tab.Screen name="නගරය " component={City} options={{
             tabBarIcon: ({ focused }) => (
             <Feather 
             name="home" 
