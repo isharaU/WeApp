@@ -37,11 +37,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 4. Push your changes to your forked repository (`git push origin feature/your-feature-name`).
 5. Create a pull request to the `main` branch of this repository.
 
-## Credits
 
-
-
-## License
 
 This project is licensed under the [MIT License](LICENSE.md).
 
