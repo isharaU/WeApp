@@ -27,16 +27,20 @@ const Tabs = () => {
         
         }}>
 
-        <Tab.Screen name="වර්ථමාන " component={Weather} options={{
+        <Tab.Screen name="වර්ථමාන" component={Weather} options={{
             tabBarIcon: ({ focused }) => (
             <Feather 
             name="droplet" 
             size={24} 
             color={focused ? '#e91e63' : 'gray'} />)
         }}
-        />
+        >
+            
 
-        <Tab.Screen name="ඉදිරියට " component={Upcomingweather} options={{
+
+        </Tab.Screen>
+
+        <Tab.Screen name="ඉදිරියට" component={Upcomingweather} options={{
             tabBarIcon: ({ focused }) => (
             <Feather 
             name="clock" 
@@ -44,7 +48,10 @@ const Tabs = () => {
             color={focused ? '#e91e63' : 'gray'} />)
         }}
         
-        />
+        >
+            
+        </Tab.Screen>
+        
         <Tab.Screen name="නගරය " component={City} options={{
             tabBarIcon: ({ focused }) => (
             <Feather 
@@ -52,7 +59,10 @@ const Tabs = () => {
             size={24} 
             color={focused ? '#e91e63' : 'gray'} />)
         }}
-        />
+        > 
+        
+        </Tab.Screen>
+        
     </Tab.Navigator>
     )
 }
