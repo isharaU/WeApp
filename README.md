@@ -11,7 +11,7 @@ Welcome to my Weather Forecast App! This app provides you with up-to-date weathe
 
 ## Screenshots
 
-Insert some screenshots or GIFs of your app here to give users a sneak peek of what it looks like.
+![Home](https://github.com/isharaU/WeApp/blob/main/assets/home.jpg) <br>
 
 ## Installation
 
@@ -26,10 +26,6 @@ To run this app locally, follow these steps:
 ## Usage
 
 Describe how users can use your app effectively. Provide any special instructions or tips.
-
-## Demo
-![Home](https://github.com/isharaU/WeApp/blob/main/assets/home.jpg) <br>
-
 
 ## Contributing
 
