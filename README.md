@@ -27,6 +27,10 @@ To run this app locally, follow these steps:
 
 Describe how users can use your app effectively. Provide any special instructions or tips.
 
+## Demo
+![Home](https://github.com/isharaU/WeApp/blob/main/assets/home.jpg) <br>
+
+
 ## Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
